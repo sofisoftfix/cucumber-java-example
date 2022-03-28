@@ -9,6 +9,7 @@ public class StepDefinitions implements En {
     static PersonRepository SYSTEM = new PersonRepository();
 
     public StepDefinitions() {
+        #instantiate a new Octocat
 
         Given("an empty repository", () -> assertEquals(0, SYSTEM.count()));
 
