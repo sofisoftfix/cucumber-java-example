@@ -23,9 +23,11 @@
  # say-hello-workflow:
   #  jobs:
    #   - say-hello
-version: 2.1
+version: 2
 jobs:
   build:
+    docker:
+      - image: circleci/openjdk:11.0-stretch-node-browsers-legacy
     steps:
       - checkout
       - run : mvn test
